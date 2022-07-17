@@ -4,6 +4,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    var didShowOnboardingView = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +20,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+//        if didShowOnboardingView == false {
+//        didShowOnboardingView = true
         //instance화 시켜준다.
         let pageVC = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
         // 페이지뷰 넘기는 스타일 바꾸기. (scroll / curl)
